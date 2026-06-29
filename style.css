@@ -1,190 +1,216 @@
 :root {
-  --cream: #f7f2ea;
+  --cream: #f7f1e8;
+  --paper: #fffaf3;
   --ink: #1f1f1c;
-  --green: #5f6540;
-  --copper: #a65f3b;
-  --rose: #d8a79a;
-  --white: #fffdf8;
+  --green: #5d6441;
+  --copper: #a25f3b;
+  --soft: #d9b6a5;
+  --dark: #101713;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
   background: var(--cream);
   color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .topbar {
-  background: #0f1712;
+  background: var(--dark);
   color: white;
   text-align: center;
   padding: 12px;
-  font: 12px Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.nav {
+.site-header {
+  background: var(--paper);
+  padding: 26px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 7%;
-  background: var(--white);
+  border-bottom: 1px solid #e4d8c7;
 }
 
-.logo span {
-  display: block;
-  font-size: 38px;
+.script {
+  font-size: 42px;
   font-style: italic;
+  line-height: 1;
 }
 
-.logo strong {
+.title {
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-size: 18px;
 }
 
-.links a {
-  margin-left: 28px;
-  color: var(--ink);
+nav a {
+  margin-left: 24px;
   text-decoration: none;
-  font: 13px Arial, sans-serif;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .hero {
   min-height: 520px;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.2)),
-    url("images/pork-tenderloin.jpg");
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   padding: 7%;
+  background:
+    linear-gradient(90deg, rgba(16, 23, 19, .88), rgba(16, 23, 19, .25)),
+    url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-card {
-  max-width: 480px;
+.hero-text {
+  max-width: 520px;
   color: white;
 }
 
-.eyebrow {
+.label {
   color: #d9a15f;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font: 13px Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
 }
 
 h1 {
-  font-size: 58px;
+  font-size: 62px;
   line-height: .95;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .subtitle {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font: 15px Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-.btn {
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.button {
   display: inline-block;
-  margin-right: 12px;
-  margin-top: 20px;
-  padding: 14px 24px;
+  margin-top: 22px;
   background: var(--green);
   color: white;
+  padding: 15px 26px;
   text-decoration: none;
-  font: 13px Arial, sans-serif;
+  font-family: Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 13px;
 }
 
-.btn.secondary {
-  background: transparent;
-  border: 1px solid white;
-}
-
-.categories {
-  padding: 50px 7%;
+.section {
+  padding: 55px 7%;
   text-align: center;
 }
 
-.categories h2 {
-  font-size: 28px;
+.section h2,
+.about h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 28px;
 }
 
-.grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+  margin-top: 30px;
 }
 
-.cat {
-  background: var(--white);
-  padding: 34px 18px;
-  border: 1px solid #ddd2c2;
+.card {
+  background: var(--paper);
+  border: 1px solid #dfd2c2;
+  padding: 38px 20px;
+  min-height: 150px;
+}
+
+.card h3 {
   text-transform: uppercase;
-  font: 14px Arial, sans-serif;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
 }
 
-.cat small {
-  display: block;
-  margin-top: 8px;
-  text-transform: none;
+.card p {
+  color: #6f665c;
 }
 
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
-  padding: 0 7% 60px;
+  gap: 22px;
+  padding: 0 7% 70px;
 }
 
 .about > div {
-  background: var(--white);
-  padding: 40px;
-  border: 1px solid #ddd2c2;
+  background: var(--paper);
+  padding: 42px;
+  border: 1px solid #dfd2c2;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 .newsletter input,
 .newsletter button {
   width: 100%;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 15px;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.newsletter input {
+  border: 1px solid #d5c7b8;
+  background: white;
 }
 
 .newsletter button {
+  border: none;
   background: var(--copper);
   color: white;
-  border: none;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-@media (max-width: 800px) {
-  .nav, .about {
+@media (max-width: 850px) {
+  .site-header {
     display: block;
   }
 
-  .links {
+  nav {
     margin-top: 20px;
   }
 
-  .links a {
+  nav a {
     display: block;
-    margin: 10px 0;
+    margin: 12px 0;
   }
 
   h1 {
     font-size: 42px;
   }
 
-  .grid {
+  .cards,
+  .about {
     grid-template-columns: 1fr;
   }
 }
