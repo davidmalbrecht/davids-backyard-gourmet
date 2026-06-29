@@ -1,0 +1,190 @@
+:root {
+  --cream: #f7f2ea;
+  --ink: #1f1f1c;
+  --green: #5f6540;
+  --copper: #a65f3b;
+  --rose: #d8a79a;
+  --white: #fffdf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.topbar {
+  background: #0f1712;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font: 12px Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  background: var(--white);
+}
+
+.logo span {
+  display: block;
+  font-size: 38px;
+  font-style: italic;
+}
+
+.logo strong {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.links a {
+  margin-left: 28px;
+  color: var(--ink);
+  text-decoration: none;
+  font: 13px Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.hero {
+  min-height: 520px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.2)),
+    url("images/pork-tenderloin.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 7%;
+}
+
+.hero-card {
+  max-width: 480px;
+  color: white;
+}
+
+.eyebrow {
+  color: #d9a15f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 13px Arial, sans-serif;
+}
+
+h1 {
+  font-size: 58px;
+  line-height: .95;
+  margin: 10px 0;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 15px Arial, sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 12px;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  font: 13px Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.categories {
+  padding: 50px 7%;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.cat {
+  background: var(--white);
+  padding: 34px 18px;
+  border: 1px solid #ddd2c2;
+  text-transform: uppercase;
+  font: 14px Arial, sans-serif;
+}
+
+.cat small {
+  display: block;
+  margin-top: 8px;
+  text-transform: none;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0 7% 60px;
+}
+
+.about > div {
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid #ddd2c2;
+}
+
+.newsletter input,
+.newsletter button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.newsletter button {
+  background: var(--copper);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+  .nav, .about {
+    display: block;
+  }
+
+  .links {
+    margin-top: 20px;
+  }
+
+  .links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
